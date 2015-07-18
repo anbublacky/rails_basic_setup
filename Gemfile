@@ -28,6 +28,7 @@ gem 'rails_email_preview', '~> 0.2.28'
 gem 'comfortable_mexican_sofa', '~> 1.12.0'
 gem 'friendly_id'
 gem 'responders'
+gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
