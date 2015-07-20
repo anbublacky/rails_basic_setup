@@ -13,7 +13,7 @@ Other Login - Twitter Facebook Google
 Image upload(profile picture) - paperclip gem
 
 
-Other Gems added are :
+#Other Gems added are :
 
 Simple form, Select2-rails, nprogress-rails
 
