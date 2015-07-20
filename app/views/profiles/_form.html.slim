@@ -1,0 +1,13 @@
+= simple_form_for(@profile) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :image, as: :file
+    = f.input :location
+    = f.input :phone
+    = f.association :user
+
+  .form-actions
+    = f.button :submit

@@ -1,2 +1,22 @@
-# rails_basic_setup
-Rails basic setup -  contains bootstrap ui, slim framework, devise login with confirmation, omniauth facebook
+# Rails basic setup
+
+Css Framework - Bootstrap
+
+Js Framework - Coffescript
+
+Template Framework - Slim
+
+Login - Devise gem with confirmation mail
+
+Other Login - Twitter Facebook Google
+
+Image upload(profile picture) - paperclip gem
+
+
+Other Gems added are :
+
+Simple form, Select2-rails, nprogress-rails
+
+Paranoia, friendly_id, letter_opener
+
+Kaminari, better_errors, quiet_assets
