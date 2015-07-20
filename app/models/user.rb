@@ -15,36 +15,33 @@ class User < ActiveRecord::Base
       if registered_user
               return registered_user
       else
-	    	auth.provider == "facebook" ? build_facebook_user(auth) : (auth.provider == "twitter" ? build_twitter_user(auth) : build_google_user(auth))
-		    user.skip_confirmation!
-		    user.save
-		    return user
+	    	new_user = auth.provider == "facebook" ? build_facebook_user(auth) : (auth.provider == "twitter" ? build_twitter_user(auth) : build_google_user(auth))
+		    new_user.skip_confirmation!
+		    new_user.save
+		    return new_user
 		  end
 		end
 	end
 
 	def self.build_facebook_user(auth)
-    user = User.new(provider:auth.provider,
-                      uid:auth.uid,
-                    email:auth.info.email,
+    new_user = User.new(provider:auth.provider, uid:auth.uid, email:auth.info.email,
                     password:Devise.friendly_token[0,20])
-    user.build_profile(first_name: auth.info.first_name, last_name: auth.info.last_name, image: auth.info.image + '?type=large')
+    new_user.build_profile(first_name: auth.info.first_name, last_name: auth.info.last_name, image: auth.info.image + '?type=large')
+    new_user
 	end
 
 	def self.build_twitter_user(auth)
-    user = User.new(provider:auth.provider,
-                      uid:auth.uid,
-                    email:auth.uid + "@twitter.com",
+    new_user = User.new(provider:auth.provider, uid:auth.uid, email:auth.uid + "@twitter.com",
                     password:Devise.friendly_token[0,20])
-    user.build_profile(first_name: auth.info.name, image: auth.info.image, location: auth.info.location)
+    new_user.build_profile(first_name: auth.info.name, image: auth.info.image, location: auth.info.location)
+    new_user
 	end
 
   def self.build_google_user(auth)
-    user = User.new(provider:auth.provider,
-                      uid:auth.uid,
-                    email:auth.info.email,
+    new_user = User.new(provider:auth.provider, uid:auth.uid, email:auth.info.email,
                     password:Devise.friendly_token[0,20])
-    user.build_profile(first_name: auth.info.name, image: auth.info.image, location: auth.info.location)
+    new_user.build_profile(first_name: auth.info.name, image: auth.info.image, location: auth.info.location)
+    new_user
   end
   def self.new_with_session(params, session)
     super.tap do |user|
