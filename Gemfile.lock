@@ -136,6 +136,8 @@ GEM
       multipart-post (>= 1.2, < 3)
     fastercsv (1.5.5)
     ffi (1.9.8)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.3.5)
@@ -379,6 +381,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   comfortable_mexican_sofa (~> 1.12.0)
   devise
+  font-awesome-sass
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails
