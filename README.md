@@ -15,8 +15,6 @@ Image upload(profile picture) - paperclip gem
 
 #Other Gems added are :
 
-Simple form, Select2-rails, nprogress-rails
+Simple form, Select2-rails, nprogress-rails, Paranoia, friendly_id, letter_opener
 
-Paranoia, friendly_id, letter_opener
-
-Kaminari, better_errors, quiet_assets
+Kaminari, better_errors, quiet_assets, bullet, font-awesome-sass
