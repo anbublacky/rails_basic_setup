@@ -31,6 +31,7 @@ gem 'comfortable_mexican_sofa', '~> 1.12.0'
 gem 'friendly_id'
 gem 'responders'
 gem 'rails_12factor', group: :production
+gem 'exception_notification'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
