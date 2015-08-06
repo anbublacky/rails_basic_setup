@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
         user.save!
       end
     end
-    if identity.user != user
+    if identity.user == user
       identity.user = user
       identity.save!
     end
