@@ -22,6 +22,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'yt'
 gem 'select2-rails'
 gem 'cocoon'
 gem 'nprogress-rails'
@@ -32,6 +33,7 @@ gem 'friendly_id'
 gem 'responders'
 gem 'rails_12factor', group: :production
 gem 'exception_notification'
+gem 'bugsnag'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -51,7 +53,6 @@ group :development do
   gem 'capistrano-rails-console'
   gem 'capistrano3-unicorn'
   gem 'capistrano-rvm'
-  gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', require: false
   gem 'rb-fsevent', require: false
