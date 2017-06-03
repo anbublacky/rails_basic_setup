@@ -4,7 +4,7 @@ development:
   database: social_database_development
   host: localhost
   pool: 5
-  username: social_user
+  username: anbu
   password: password
   min_messages: warning
 
